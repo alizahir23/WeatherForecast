@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+html {
+  height: 100vh;
+  background: linear-gradient(#0ea2b2, #0e65b2) no-repeat fixed;
+}
+
+.container {
+  max-width: 2000px;
+  margin: auto;
+  padding-top: 20vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+}
+
+.location,
+.temperature {
+  width: 60%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temperature {
+  padding-top: 10vh;
+  flex-direction: column;
+}
+
+.degreeSection {
+  display: flex;
+
+  padding-bottom: 3vh;
+}
+
+.degreeSection span {
+  font-size: 30px;
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+.degreeSection h2 {
+  font-size: 40px;
+}
+
+.dailyView {
+  display: flex;
+  padding: 80px;
+}
+
+.individualDay {
+  border-right: solid 1px #0e65b2;
+}
+
+.individualDay canvas {
+  padding-top: 2vh;
+  width: 20%;
+}
+
+.individualDay div {
+  display: flex;
+
+  flex-direction: column-reverse;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.individualDay p {
+  font-size: 12px;
+  padding-top: 2vh;
+}
+
+@media only screen and (max-width: 770px) {
+  html {
+    min-height: 100%;
+  }
+  .dailyView {
+    flex-direction: column;
+  }
+  .individualDay {
+    border-right: 0;
+    border-bottom: solid 1px #0e538f;
+  }
+
+  .dailyView div {
+    padding: 2vh 0 2vh 0;
+  }
+}
