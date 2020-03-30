@@ -43,6 +43,10 @@ html {
   padding-bottom: 3vh;
 }
 
+.placeHolder p {
+  padding: 2px;
+}
+
 .degreeSection span {
   font-size: 30px;
   cursor: pointer;

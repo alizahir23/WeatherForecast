@@ -51,8 +51,8 @@ window.addEventListener('load', () => {
                             var dayName = days[d.getDay()]
                             document.querySelector(`.day${index}`).innerHTML = dayName;
                             setIcons(data.icon, document.querySelector(`.icon${index}`));
-                            let min = Math.round(data.temperatureMin);
-                            let max = Math.round(data.temperatureMax);
+                            min = Math.round(data.temperatureMin);
+                            max = Math.round(data.temperatureMax);
                             document.querySelector(`.dayTemp${index}`).innerHTML = `${min}↓ ${max}↑`;
                         }
 
