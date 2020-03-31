@@ -104,16 +104,11 @@ html {
   .dailyView div {
     padding: 2vh 0 2vh 0;
   }
-  .temperature {
-    padding-top: 3vh;
-  }
+
   .placeHolder {
     margin-right: 2vw;
   }
   .locationIcon {
     margin-left: 2vw;
-  }
-  .dailyView > first-child {
-    border-top: solid 1px #0e538f;
   }
 }
