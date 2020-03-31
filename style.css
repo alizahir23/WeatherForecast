@@ -113,4 +113,7 @@ html {
   .locationIcon {
     margin-left: 2vw;
   }
+  .dailyView > first-child {
+    border-top: solid 1px #0e538f;
+  }
 }
