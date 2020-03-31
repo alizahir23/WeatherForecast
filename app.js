@@ -34,13 +34,11 @@ window.addEventListener('load', () => {
                 })
                 .then(data => {
                     console.log(data);
-                    let min, max;
-                    min = Math.round(data.daily.data[0].temperatureMin);
-                    max = Math.round(data.daily.data[0].temperatureMax);
+
 
                     document.querySelector('.temperatureDegree').innerHTML = Math.round(`${data.currently.temperature}`);
                     document.querySelector('.summary').innerHTML = data.currently.summary;
-                    document.querySelector('.lohi').innerHTML = `${min}↓ ${max}↑`;
+
                     document.querySelector('span').innerHTML = 'ºC';
                     setIcons(data.currently.icon, document.querySelector('.icon'));
                     let d = new Date;
@@ -50,6 +48,14 @@ window.addEventListener('load', () => {
                             d.setTime(data.time * 1000);
                             var dayName = days[d.getDay()]
                             document.querySelector(`.day${index}`).innerHTML = dayName;
+                            setIcons(data.icon, document.querySelector(`.icon${index}`));
+                            min = Math.round(data.temperatureMin);
+                            max = Math.round(data.temperatureMax);
+                            document.querySelector(`.dayTemp${index}`).innerHTML = `${min}↓ ${max}↑`;
+                        } else {
+                            d.setTime(data.time * 1000);
+                            var dayName = days[d.getDay()]
+                            document.querySelector(`.day${index}`).innerHTML = "Today";
                             setIcons(data.icon, document.querySelector(`.icon${index}`));
                             min = Math.round(data.temperatureMin);
                             max = Math.round(data.temperatureMax);
