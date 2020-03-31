@@ -89,8 +89,12 @@ html {
   html {
     min-height: 100%;
   }
+  .container {
+    padding-top: 10vh;
+  }
   .dailyView {
     flex-direction: column;
+    padding-top: 5vh;
   }
   .individualDay {
     border-right: 0;
@@ -99,5 +103,14 @@ html {
 
   .dailyView div {
     padding: 2vh 0 2vh 0;
+  }
+  .temperature {
+    padding-top: 3vh;
+  }
+  .placeHolder {
+    margin-right: 2vw;
+  }
+  .locationIcon {
+    margin-left: 2vw;
   }
 }
